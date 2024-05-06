@@ -1,0 +1,39 @@
+{% extends "navbar.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="rujiba" />
+    <meta name="author" content="credits by kelvin" />
+    <title>Dashboard Rujiba</title>
+</head>
+<body class="sb-nav-fixed">
+
+{% block content %}
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Rekapitulasi Absensi</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Import Rekapitulasi Absensi</li>
+            </ol>
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="excelFile">Pilih File Excel:</label>
+                            <input type="file" class="form-control-file" id="excelFile" name="excelFile">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Import</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>
+{% endblock content %}

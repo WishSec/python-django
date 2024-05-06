@@ -1,0 +1,68 @@
+{% extends "navbar.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="rujiba" />
+    <meta name="author" content="credits by kelvin" />
+    <title>Dashboard Rujiba</title>
+</head>
+<body class="sb-nav-fixed">
+  {% block content %}
+    <div id="layoutSidenav_content">
+      <main>
+        <div class="container-fluid px-4">
+          <h1 class="mt-4">Welcome {{ user.username }}</h1>
+          <ol class="breadcrumb mb-4">
+            <li class="breadcrumb-item active">Dashboard</li>
+          </ol>
+          
+          <!-- Survey Form -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <i class="fas fa-poll"></i>
+                  Survey
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="surveyQuestion">Question:</label>
+                      <input type="text" class="form-control" id="surveyQuestion" placeholder="Enter your question">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comment Section -->
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card mb-4">
+                <div class="card-header">
+                  <i class="fas fa-comment"></i>
+                  Comments
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="comment">Comment:</label>
+                      <textarea class="form-control" id="comment" rows="3" placeholder="Enter your comment"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends "navbar.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="rujiba" />
+    <meta name="author" content="credits by kelvin" />
+    <title>Dashboard Rujiba</title>
+  </head>
+  <body class="sb-nav-fixed">
+
+    {% block content %}
+      <div id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid px-4">
+            <h1 class="mt-4">History</h1>
+            <ol class="breadcrumb mb-4">
+              <li class="breadcrumb-item active">Login History</li>
+            </ol>
+            
+            <!-- Login History -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <i class="fas fa-history"></i>
+                Login History
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Login Time</th>
+                        <th>IP Address</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- You can populate this table with login history data -->
+                      <tr>
+                        <td>admin</td>
+                        <td>2024-04-18 09:00:00</td>
+                        <td>192.168.1.1</td>
+                      </tr>
+                      <!-- Add more rows as needed -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
+      </div>
+    </div>
+    </main>
+    </div>
+    </div>
+    {% endblock content %}
+  </body>
+</html>
